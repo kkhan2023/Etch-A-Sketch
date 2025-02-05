@@ -4,37 +4,116 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgb(250, 250, 250);
+  background-image: url(/Images/background-image.jpg);
+  overflow: hidden;
+}
+
+#uiContainer {
+  border: 5px solid black;
+  border-radius: 20px;
+  box-shadow: 10px 5px 5px rgb(0, 0, 0);
+  background-color: rgb(233, 1, 1);
+  box-sizing: border-box;
+  height: 650px;
+  padding: 10px 60px 10px 60px;
+  margin-top: 10px;
 }
 
 #container {
   display: flex;
   flex-wrap: wrap;
-  width: 560px;
-  height: 560px;
+  width: 440px;
+  height: 440px;
   background-color: white;
+  border-radius: 5px;
+  border: 2px solid black;
 }
 
 #container .grid {
-  width: 35px;
-  height: 35px;
+  width: 27.5px;
+  height: 27.5px;
   box-sizing: border-box;
 }
 
 #buttonDiv {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  width: 560px;
+  justify-content: center;
+  width: 440px;
+  gap: 20px;
+  padding-top: 10px;
 }
 
-#changeGridButton {
-  font-size: 20px;
+#changeGridButton,
+#changeToRgb,
+#changeToFade {
+  font-size: 14px;
   padding: 10px;
   margin-bottom: 20px;
   cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+#resetButton {
+  margin-top: 10px;
+  font-size: 22px;
+  padding: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
 #changeGridButton:hover {
   background-color: rgb(253, 253, 168);
-  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+#changeToRgb:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 10%,
+    rgba(208, 222, 33, 1) 20%,
+    rgba(79, 220, 74, 1) 30%,
+    rgba(63, 218, 216, 1) 40%,
+    rgba(47, 201, 226, 1) 50%,
+    rgba(28, 127, 238, 1) 60%,
+    rgba(95, 21, 242, 1) 70%,
+    rgba(186, 12, 248, 1) 80%,
+    rgba(251, 7, 217, 1) 90%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  color: rgb(0, 0, 0);
+  transform: scale(1.1);
+}
+
+#changeToFade:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 1s;
+  transform: scale(1.1);
+}
+#resetButton:hover {
+  transform: scale(1.1);
+}
+
+.grid:hover {
+  cursor: crosshair;
+}
+
+#uiBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.circle {
+  height: 60px;
+  width: 60px;
+  background-color: #bbb;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  border-radius: 50%;
 }
